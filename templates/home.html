@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Print to IP</title>
+</head>
+<body>
+    <h1>Print to IP</h1>
+    <form method="POST">
+        <label for="printer_ip">Printer IP:</label>
+        <input type="text" id="printer_ip" name="printer_ip" value="{{ printer_ip }}">
+        <button type="submit">Print</button>
+    </form>
+</body>
+</html>
