@@ -1,3 +1,5 @@
+<!-- home.html -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +7,23 @@
     <title>Print to IP</title>
 </head>
 <body>
-    <h1>Print to IP</h1>
-    <form method="POST">
-        <label for="printer_ip">Printer IP:</label>
-        <input type="text" id="printer_ip" name="printer_ip" value="{{ printer_ip }}">
-        <button type="submit">Print</button>
-    </form>
+    <div class="container">
+        <h1>Print to IP</h1>
+        <div class="content">
+            <form method="POST">
+                <h3 class="subtitle">Make sure you select the correct type!</h3>
+                <h3 class="subtitle">The incorrect type may cause the printer to get stuck.</h3>
+                <h5 class="subtext">(If this happens, you must clear jobs or reset the printer)</h5>
+                <label for="printer_ip">Printer IP or Name</label>
+                <br>
+                <input type="text" id="printer_ip" name="printer_ip" value="{{ printer_ip }}">
+                <br>
+                <br>
+                <button type="submit" name="print_pdf">Generic Paper Printer</button>
+                <br>
+                <button type="submit" name="print_4x6label">4x6 Label Printer</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
