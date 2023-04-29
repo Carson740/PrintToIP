@@ -1,27 +1,30 @@
 <!-- home.html -->
-
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="static/css/homestyle.css">
     <title>Print to IP</title>
 </head>
 <body>
+    <script src="static/js/error.js"></script>
     <div class="container">
-        <h1>Print to IP</h1>
+        <h3 class="subtitle">Any issues please inform Carson Hunt</h3>
+        <h1 class="mainTitle">Print to IP</h1>
         <div class="content">
             <form method="POST">
-                <h3 class="subtitle">Make sure you select the correct type!</h3>
-                <h3 class="subtitle">The incorrect type may cause the printer to get stuck.</h3>
-                <h5 class="subtext">(If this happens, you must clear jobs or reset the printer)</h5>
-                <label for="printer_ip">Printer IP or Name</label>
+                <label class="inputText" for="printer_ip">Printer IP or Name</label>
                 <br>
-                <input type="text" id="printer_ip" name="printer_ip" value="{{ printer_ip }}">
+                <input type="text" id="printer_ip" name="printer_ip" value="">
                 <br>
-                <br>
-                <button type="submit" name="print_pdf">Generic Paper Printer</button>
-                <br>
-                <button type="submit" name="print_4x6label">4x6 Label Printer</button>
+                <div class="button-container1">
+                    <button type="submit" class="button button1" name="print_pdf_b&w">Generic B&W<br>Paper Printer</button>
+                    <button type="submit" class="button button2" name="print_pdf_color" disabled>Generic Color<br>Paper Printer</button>
+                </div>
+                <div class="button-container2">
+                    <button type="submit" class="button button3" name="print_4x6label">4x6 Label Printer</button>
+                    <button type="submit" class="button button4" name="Undefined" disabled>Work in Progress</button>
+                </div>
+                <div id="error-message" class="error-message">{{ error_message }}</div>
             </form>
         </div>
     </div>
