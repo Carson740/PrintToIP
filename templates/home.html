@@ -8,7 +8,7 @@
 <body>
     <script src="static/js/error.js"></script>
     <div class="container">
-        <h3 class="subtitle">Any issues please inform Carson Hunt</h3>
+        <!-- <h3 class="subtitle">Any issues please inform Carson Hunt</h3> -->
         <h1 class="mainTitle">Print to IP</h1>
         <div class="content">
             <form method="POST">
@@ -18,10 +18,10 @@
                 <br>
                 <div class="button-container1">
                     <button type="submit" class="button button1" name="print_pdf_b&w">Generic B&W<br>Paper Printer</button>
-                    <button type="submit" class="button button2" name="print_pdf_color" disabled>Generic Color<br>Paper Printer</button>
+                    <button type="submit" class="button button2" name="print_pdf_color">Generic Color<br>Paper Printer</button>
                 </div>
                 <div class="button-container2">
-                    <button type="submit" class="button button3" name="print_4x6label">4x6 Label Printer</button>
+                    <button type="submit" class="button button3" name="print_label_4x6">4x6 Label Printer</button>
                     <button type="submit" class="button button4" name="Undefined" disabled>Work in Progress</button>
                 </div>
                 <div id="error-message" class="error-message">{{ error_message }}</div>

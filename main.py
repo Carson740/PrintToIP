@@ -51,6 +51,8 @@ def home():
     error_message = request.args.get('error_message')  # Get the error_message from the query parameters
     if request.method == 'POST':
         printer_ip = request.form['printer_ip']
+        print(printer_ip)
+        print(request.form)
         if 'print_pdf_b&w' in request.form:
             isValid = checkValid('print_pdf_b&w', printer_ip)
             if isValid == True:
@@ -75,6 +77,7 @@ def home():
             return redirect(url_for('home', error_message=error, printer_ip=printer_ip))
         elif 'print_label_4x6' in request.form:
             isValid = checkValid('print_label_4x6', printer_ip)
+            print(isValid)
             if isValid == True:
                 printTo('print_label_4x6', printer_ip)
             elif isValid == "WrongType":

@@ -53,7 +53,6 @@ elif printer_type == "print_pdf_color":
         # Close the socket connection
         sock.close()
 elif printer_type == "print_label_4x6":
-    print("printing")
     with open('prints/4x6 Test.prn', 'rb') as f:
         # 'rb' mode is used to open the file in binary mode for reading
 
