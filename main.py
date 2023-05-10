@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request, redirect, url_for
 import subprocess
-import requests
+import pip._vendor.requests as requests
 import os
 
 def printTo(printType, printerIP):

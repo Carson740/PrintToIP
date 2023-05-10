@@ -1,4 +1,6 @@
-import requests
+#test.py
+
+import pip._vendor.requests as requests
 import traceback
 
 def checkValid(printType, printerIP):
