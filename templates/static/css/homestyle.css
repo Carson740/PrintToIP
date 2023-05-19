@@ -112,6 +112,21 @@ input[type="text"] {
 }
 
 .mainTitle {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     padding-top: 50px
+}
+
+.warning {
+    color: rgb(179, 3, 3);
+    text-shadow: 2px 1px 5px black;
+}
+
+.warningText {
+    color: rgb(179, 3, 3);
+    text-shadow: 2px 1px 5px black;
+    text-align: center;
+    max-width: 400px;
+    word-wrap: initial;
+    padding-top: -10px;
+    padding-bottom: 20px;
 }

@@ -41,8 +41,10 @@ print(TEMPLATE_DIR)
 print(STATIC_DIR)
 
 app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
-
-...
+app.config.update(
+    TESTING = True,
+    TEMPLATES_AUTO_RELOAD = True
+)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
